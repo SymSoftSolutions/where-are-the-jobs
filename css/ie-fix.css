@@ -1,0 +1,20 @@
+#salary_label {
+	left: 0 !important;
+	top: 300px !important;
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+}
+
+#jobs_label_value {
+	left: 360px !important;
+	top: 575px !important;
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+}
+
+#data_sub_container .average, #data_sub_container .jobs {
+	margin: 1em;
+}
+
+.dataTables th, .dataTables td
+{
+	padding: .5em;
+}

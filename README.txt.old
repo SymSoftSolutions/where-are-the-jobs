@@ -1,0 +1,54 @@
+
+Where are the Jobs 
+------------------
+
+SymSoft Solutions. application Where are the Jobs? allows users to interactively explore the salary and job statistics for various occupations at national, state and regional levels. Using the application, they can choose an occupation and explore the job market for that occupation, or they can start with a state or region and explore the top occupations within it. Where are the Jobs? provides context for the user by highlighting the geographic area, plotting the information on a graph for easy comparison and allowing the users to sort either by number of jobs or by salary. The application also provides information about the top industries providing employment in a given occupation.
+
+We believe that this ability to interactively explore employment scenarios across different occupations and geographical areas will assist young men and women who are trying to choose a career, unemployed people who are getting ready to retrain themselves in this weak economy, or citizens and business that are planning to relocate to a different part of the country.
+
+Where are the Jobs? Uses data provided by the US Department of Labor and Bureau of Labor Statistics in May 2010.
+The data is available at ftp://ftp.bls.gov/pub/time.series/oe/
+
+
+System Requirements
+-------------------
+
+The application uses PHP 5.2 or higher version.
+It uses MYSQL 5+
+
+
+Installation
+------------
+
+- Copy content of this folder in a web-accessible directory.
+- Setup MYSQL Database
+
+  The database setup scripts are in data directory, that is part of this distribution.
+  The shell scripts in the distribution are executable under Linux environment and use Bash Shell.
+
+  Change directory to scripts
+
+  Run download_data.sh   This will download data files in files directory.
+
+  Create a MYSQL database that you would like to use for this application.
+
+  Modify the file scripts/create_database.sh 
+  Change the following lines with database user name that has read/write access to database.
+
+  mysql_user_name=<database_user_name>
+  mysql_password=<database_user_password>
+  mysql_database=<database_name>
+
+  Run the script:   create_database.sh
+
+  This scripts will import the datafiles in MYSQL database, create a pivot table for quick access to data.
+  (Note this script will take about 20 minuites to run)
+
+  Create a MYSQL use that has read permissions on this database.
+ 
+  
+- Modify the file php php_mysql_class/config_inc.php with the MYSQL database name and user credentials.
+
+- Access the application through web
+
+

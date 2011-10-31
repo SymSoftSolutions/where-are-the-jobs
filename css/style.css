@@ -1,0 +1,724 @@
+@import url("css_resets.css");
+
+@import url("font/font.css");
+@charset "utf-8";
+/* CSS Document */
+/*
+Orange: FFAA00
+Yellow: C2B93E
+Green: 808F5D 
+Gray Green: 576157
+Dark Gray: 302F30
+UbuntuTitlingBold
+LeagueGothicRegular
+OpenSansLight
+OpenSansLightItalic
+OpenSansRegular
+OpenSansItalic
+OpenSansSemibold
+OpenSansSemiboldItalic
+OpenSansBold
+OpenSansBoldItalic
+OpenSansExtrabold
+OpenSansExtraboldItalic
+*/
+.heading_style {
+  font-family: 'UbuntuTitlingBold', Helvetica, Arial, san-serif;
+  color: #FA0;
+}
+.body_style {
+  /*font-family: 'LeagueGothicRegular', Helvetica, Arial, san-serif;*/
+
+  font-family: 'UbuntuTitlingBold', Helvetica, Arial, san-serif;
+  color: #fff;
+}
+.input_style {
+  font-family: 'OpenSansLightItalic', Helvetica, Helvetica, sans-serif;
+}
+.list_style {
+  font-family: 'OpenSansSemibold', Helvetica, Arial, sans-serif;
+  color: #fff;
+}
+.shadow {
+  -moz-box-shadow: 3px 3px 4px #000;
+  -webkit-box-shadow: 3px 3px 4px #000;
+  box-shadow: 3px 3px 4px #000;
+}
+body {
+  min-width: 65em;
+  max-width: 85em;
+  margin: 0 auto 0;
+  background: #000;
+  color: #FFF;
+  /*font-family: 'LeagueGothicRegular', Helvetica, Arial, san-serif;*/
+
+  font-family: 'UbuntuTitlingBold', Helvetica, Arial, san-serif;
+  color: #fff;
+}
+em {
+  font-style: italic;
+}
+::-webkit-scrollbar {
+  width: 1em;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background: url(../img/bg_pattern.png);
+  border-radius: .5em;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: .5em;
+  background: rgba(10, 10, 10, 0.8);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+#header {
+  height: 8em;
+  display: block;
+  position: relative;
+  display: block;
+}
+#header h1 {
+  position: absolute;
+  display: block;
+  font-size: 3em;
+  left: 0;
+  width: 60%;
+  margin: .5em 0 0;
+  font-family: 'UbuntuTitlingBold', Helvetica, Arial, san-serif;
+  color: #FA0;
+}
+#header h2.tagline {
+  font-family: 'UbuntuTitlingBold', Helvetica, Arial, san-serif;
+  color: #FA0;
+  color: #fff;
+  position: absolute;
+  top: 3.5em;
+  font-size: 1.3em;
+}
+#header #subheader {
+  position: absolute;
+  display: block;
+  height: 8em;
+  right: 0;
+  width: 40%;
+  background: url(../img/bg_pattern.png);
+}
+#header #subheader h2 {
+  font-family: 'UbuntuTitlingBold', Helvetica, Arial, san-serif;
+  color: #FA0;
+}
+#header #subheader span.tag_line {
+  font-family: 'OpenSansLightItalic', Helvetica, Helvetica, sans-serif;
+  color: #FFF;
+  float: right;
+  background: url(symsoft_logo.png) no-repeat bottom;
+  width: 156px;
+  height: 80px;
+  display: block;
+  margin: .5em 1em 0;
+  font-size: 1em;
+}
+#header #subheader span.credit {
+  /*font-family: 'LeagueGothicRegular', Helvetica, Arial, san-serif;*/
+
+  font-family: 'UbuntuTitlingBold', Helvetica, Arial, san-serif;
+  color: #fff;
+  display: block;
+  margin: 1.5em 1em 0;
+  font-size: 1.5em;
+  letter-spacing: .08em;
+  float: left;
+  width: 10em;
+}
+#nav {
+  height: 18em;
+  display: block;
+  color: #ccc;
+}
+#nav ul.occupationGroup,
+#nav ul.occupation,
+#nav ul.state,
+#nav ul.region {
+  height: 18em;
+  float: left;
+  margin-right: .2%;
+  background: #222;
+}
+#nav ul.occupationGroup li,
+#nav ul.occupation li,
+#nav ul.state li,
+#nav ul.region li {
+  display: block;
+  margin: 0 .2em 0;
+}
+#nav ul.occupationGroup li ul,
+#nav ul.occupation li ul,
+#nav ul.state li ul,
+#nav ul.region li ul {
+  overflow-y: scroll;
+  height: 12em;
+}
+#nav ul.occupationGroup li ul li,
+#nav ul.occupation li ul li,
+#nav ul.state li ul li,
+#nav ul.region li ul li {
+  font-family: 'OpenSansSemibold', Helvetica, Arial, sans-serif;
+  color: #fff;
+  font-size: 1.1em;
+  line-height: 1.2em;
+  padding: .5em;
+  margin: 0 .2em;
+  cursor: pointer;
+  color: #ccc;
+}
+#nav ul.occupationGroup li ul .selected,
+#nav ul.occupation li ul .selected,
+#nav ul.state li ul .selected,
+#nav ul.region li ul .selected {
+  color: #000;
+  background: #fff;
+  cursor: auto;
+}
+#nav ul.occupationGroup li ul .close,
+#nav ul.occupation li ul .close,
+#nav ul.state li ul .close,
+#nav ul.region li ul .close {
+  display: block;
+  width: 15px;
+  height: 15px;
+  overflow: hidden;
+  text-indent: -9999px;
+  float: right;
+  background: transparent url(../img/icons/close.png) no-repeat 0 0;
+}
+#nav ul.occupationGroup li ul .close:hover,
+#nav ul.occupation li ul .close:hover,
+#nav ul.state li ul .close:hover,
+#nav ul.region li ul .close:hover {
+  background-position: 0 -15px;
+}
+#nav ul.occupationGroup li input,
+#nav ul.occupation li input,
+#nav ul.state li input,
+#nav ul.region li input {
+  font-family: 'OpenSansLightItalic', Helvetica, Helvetica, sans-serif;
+  font-size: 1em;
+  color: #000;
+  width: 100%;
+  border: none;
+  margin: 0 0 .5em;
+  background: #ddd;
+  padding: .1em;
+}
+#nav ul.occupationGroup li input.highlight,
+#nav ul.occupation li input.highlight,
+#nav ul.state li input.highlight,
+#nav ul.region li input.highlight {
+  background: #fff;
+}
+#nav ul.occupationGroup li.title,
+#nav ul.occupation li.title,
+#nav ul.state li.title,
+#nav ul.region li.title {
+  font-family: 'UbuntuTitlingBold', Helvetica, Arial, san-serif;
+  color: #FA0;
+  font-size: 1.5em;
+  margin: .5em .35em .5em;
+  color: #fff;
+}
+#nav ul.highlight {
+  background: #666;
+}
+#nav ul.occupationGroup {
+  width: 29.8%;
+}
+#nav ul.occupation {
+  width: 31.8%;
+}
+#nav ul.state {
+  width: 15.8%;
+}
+#nav ul.region {
+  margin: 0;
+  width: 22%;
+  float: right;
+}
+#main {
+  position: relative;
+}
+#main #breadcrumb {
+  background: #FFAA00;
+  padding: 0 0 0 .5em;
+}
+#main #breadcrumb span {
+  /*font-family: 'LeagueGothicRegular', Helvetica, Arial, san-serif;*/
+
+  font-family: 'UbuntuTitlingBold', Helvetica, Arial, san-serif;
+  color: #fff;
+  vertical-align: baseline;
+  font-size: 1.5em;
+  line-height: 1.4em;
+}
+#main #breadcrumb span:before {
+  content: " > ";
+}
+#main #breadcrumb > span:first-child {
+  padding: 0;
+}
+#main #breadcrumb > span:first-child:before {
+  content: none;
+}
+
+#main h2 {
+  font-family: 'UbuntuTitlingBold', Helvetica, Arial, san-serif;
+  color: #FA0;
+  font-size: 3em;
+  margin: .5em 0;
+}
+#main #content {
+  display: block;
+  position: relative;
+  min-height: 40em;
+}
+
+#main #data {
+  width: 100%;
+}
+#main h3 {
+  font-family: 'UbuntuTitlingBold', Helvetica, Arial, san-serif;
+  color: #FA0;
+  background: none;
+  font-size: 2em;
+
+  margin: .5em;
+  height: auto;
+}
+#sort_by {
+  float: right;
+}
+#console {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  right: -200px;
+  top: 0;
+  border: 1px solid #fff;
+  display: none;
+}
+#postConsole {
+  clear: both;
+}
+#graphContainer {
+  position: relative;
+  height: 600px;
+}
+#graphContainer.granular {
+  height: 350px;
+}
+#info {
+  font-family: 'UbuntuTitlingBold', Helvetica, Arial, san-serif;
+  font-size: 2em;
+  width: 500px;
+  position: absolute;
+  right: 0;
+  top: 420px;
+  background: url(../img/bg_pattern.png);
+  color: #fa0;
+}
+#svgMap {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  z-index: 1000;
+}
+#svgState {
+  position: absolute;
+  left: 300px;
+  top: 10px;
+}
+#svgGraph {
+  position: absolute;
+}
+
+#state_data {
+  float: left;
+  color: #FFAA00;
+  font-family: 'UbuntuTitlingBold', Helvetica, Arial, san-serif;
+  font-size: 2em;
+}
+#state_data .label {
+  color: #FFFFFF;
+  font-size: 0.75em;
+}
+#graphData, #max_min_numbers, #granular_msa_code {
+  display: none;
+}
+#occupation_definition {
+  display: none;
+}
+#graph_sort {
+  display: none;
+}
+#average {
+  position: absolute;
+  left: 0;
+  top: 100px;
+}
+#jobs {
+  position: absolute;
+  left: 200px;
+  top: 570px;
+}
+#salary_label {
+  position: absolute;
+  top: 369px;
+  left: -73px;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  text-transform: uppercase;
+}
+#jobs_label {
+  position: absolute;
+  top: 570px;
+  left: 106px;
+  text-transform: uppercase;
+}
+#scrollIn, #scrollOut {
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  position: absolute;
+  cursor: pointer;
+}
+#scrollIn {
+  background: transparent url(../img/icons/up_right.png) no-repeat 0 0;
+}
+#scrollOut {
+  background: transparent url(../img/icons/down_left.png) no-repeat 0 0;
+}
+#scrollIn:hover, #scrollOut:hover {
+  background-position: 0 -20px;
+}
+.average, .jobs {
+  border: none;
+  font-family: 'OpenSansSemibold', Helvetica, Arial, sans-serif;
+  color: #fff;
+  color: #FFF;
+  background: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+#graphContainer .average, #graphContainer .jobs {
+  position: absolute;
+}
+#info h3 {
+  font-size: 1em;
+}
+#info .label {
+  padding: 0 0 0 1em;
+  font-size: .75em;
+  color: #FFF;
+}
+#key {
+  display: none;
+  width: 200px;
+  height: 201px;
+  background: transparent url(../img/gradient.png) no-repeat right top;
+  text-align: right;
+  position: absolute;
+  left: 300px;
+  top: 50px;
+}
+#key .inner {
+  position: relative;
+  height: 201px;
+}
+#key .max, #key .min {
+  position: absolute;
+  padding-right: 25px;
+  right: 0;
+}
+#key .max {
+  top: 0;
+}
+#key .min {
+  bottom: 0;
+}
+#graph_sort {
+  top: 175px;
+}
+#key,
+#graph_sort,
+#salary_label,
+#salary_label_value,
+#jobs_label,
+#jobs_label_value,
+#info,
+#scrollIn,
+#scrollOut {
+  z-index: 2000;
+}
+#no_data {
+  font-size: 1.5em;
+  position: absolute;
+  left: 127px;
+  top: 300px;
+}
+.granular #no_data {
+  top: 100px;
+}
+#regional_statistics {
+  margin: 0 0 0 1em;
+  color: #FFAA00;
+}
+#regional_statistics .regional_salary {
+  font-size: 6em;
+}
+#regional_statistics .regional_salary .label {
+  color: #FFFFFF;
+  font-size: 0.34em;
+}
+#regional_statistics .regional_jobs {
+  font-size: 5em;
+}
+#regional_statistics .regional_jobs .label {
+  color: #FFFFFF;
+  font-size: 0.4em;
+}
+
+#salary_label_value {
+  text-align: right;
+  position: absolute;
+  left: -56px;
+  top: 247px;
+  width: 100px;
+}
+#jobs_label_value {
+  text-align: left;
+  width: 100px;
+  position: absolute;
+  left: 315px;
+  top: 616px;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+#occupation_definition_icon {
+  cursor: pointer;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(../img/icons/description.png) no-repeat 0 0;
+  margin-left: 0.25em;
+  vertical-align: top;
+}
+#occupation_definition_icon:hover {
+  background-position: 0 -15px;
+}
+#occupation_definition {
+  width: 300px;
+  padding: 1em;
+  position: absolute;
+  left: 0;
+  top: 120px;
+  background: #222222 url(../img/bg_pattern.png) repeat 0 0;
+  border: 1px solid #777;
+  z-index: 5000;
+  line-height: 1.6em;
+}
+#occupation_definition h3 {
+  margin: 0 0 .4em;
+}
+#page_footer {
+  width: 100%;
+  margin-top: 1em;
+  border-top: solid thin #ccc;
+  border-bottom: solid thin #ccc;
+  line-height: 1.5em;
+  height: 5em;
+}
+#page_footer .disclaimer {
+  margin-top: 1em;
+  display: block;
+  float: left;
+  width: 50%;
+}
+#page_footer .disclaimer a {
+  color: #fa0;
+}
+#page_footer .disclaimer a:hover {
+  color: #CCC;
+}
+#page_footer .pre_browser {
+  margin-top: 1em;
+  display: block;
+/*
+  text-align: right;
+  float: right;
+  width: 50%;
+ */
+}
+#page_footer .pre_browser span.orange {
+  color: #fa0;
+}
+#info_jobs {
+  padding-bottom: .5em;
+}
+
+.close {
+	cursor: pointer;
+}
+
+/* Table Styles */
+#regional_data_container , #primary_data, #secondary_data {
+	background: url(../img/bg_pattern.png);
+}
+
+#data_sub_container {
+  margin: 5em 0 0;
+}
+
+#primary_data {
+  margin: 0 2% 0 0;
+}
+
+#primary_data, #secondary_data
+{
+	width: 49%;
+	float: left;
+}
+
+#data_sub_container.single #primary_data, #data_sub_container.single #secondary_data {
+	width: 100%;
+	margin: 0;
+}
+
+#regional_data_container table {
+	margin: .5em;
+}
+
+table th, table td {
+	padding: .5em;
+}
+
+td {
+  padding: .5em;
+  font-size: 1.2em;
+  border-left: thin solid #fa0;
+  font-family: 'OpenSansSemibold', Helvetica, Arial, sans-serif;
+  color: #fff;
+  text-align: right;
+}
+
+td:first-child {
+  border-left: none;
+  text-align: left;
+}
+
+th {
+  font-family: 'UbuntuTitlingBold', Helvetica, Arial, san-serif;
+  color: #FA0;
+  text-align: left;
+  background: transparent;
+}
+
+.dataTables p {
+  font-family: 'OpenSansSemibold', Arial, Helvetica, sans-serif;
+  font-size: .8em;
+  line-height: 1.5em;
+}
+
+.dataTables thead {
+  font-family: 'UbuntuTitlingBold', Helvetica, Arial, san-serif;
+  margin: 1em;
+  background: transparent;
+}
+
+#primary_data thead, #secondary_data thead {
+  color: #FFFFFF;
+  font-family: 'UbuntuTitlingBold', Helvetica, Arial, san-serif;
+  font-size: 1.5em;
+  background: none;
+}
+
+#regional_data_container {
+  margin: 2em 0 0 1em;
+  width: 50%;
+}
+
+.disclaimer_box {
+  width: 800px;
+  margin-left: auto ;
+  margin-right: auto ;
+}
+
+.disclaimer_box_inner {
+  position: relative;
+  top: 150px;
+  background-color: #000;
+  padding: 2em ;
+}
+
+#fact_statement h2 {
+  color: #FFAA00;
+  font-family: 'UbuntuTitlingBold',Helvetica,Arial,san-serif;
+  font-size: 2em;
+  margin: 0.5em 0;
+}
+
+#disclaimer_text {
+  padding-bottom: 1em ;
+}
+
+#disclaimer_accept_button {
+  text-align: center;
+}
+
+
+#tooltip {
+	position: absolute;
+	z-index: 90000;
+	display: none;
+}
+#tooltip_inner {
+  color: #ffaa00;
+  padding: 1em;
+  font-family: 'UbuntuTitling-Bold-webfont';
+  display: block;
+  width: 13em;
+  min-height: 3em;
+  background: #222222 url(../img/bg_pattern.png) repeat 0 0;
+  position: relative;
+    border: 1px solid #777;
+}
+#tooltip .notch {
+  position: absolute;
+  bottom: -15px;
+  let: 5px;
+}
+#tooltip a {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+#tooltip h2 {
+  font-size: 1.5em;
+  color: #fa0;
+  margin: 0 0 .5em;
+}
+#tooltip h3 {
+  font-size: 1.2em;
+  margin: .4em 0 .4em;
+}
+#tooltip h3 span {
+  color: #FFF;
+}
+
+#copright {
+  float: right;
+}
